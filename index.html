@@ -1,27 +1,1052 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Test Screen</title>
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f0f0f0;
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
-        h1 {
-            font-size: 4rem;
-            color: #333;
-        }
-    </style>
+<title>Intelligent Software Solution</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+
+body, html {
+  height: 100%;
+  line-height: 1.8;
+}
+
+/* Full height image header */
+.bgimg-1 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("./images/test2.webp");
+  min-height: 100%;
+}
+
+.w3-bar .w3-button {
+  padding: 16px;
+}
+#about img {
+
+  height: 80px;
+}
+
+</style>
 </head>
 <body>
-    <h1>Test Screen</h1>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-card" id="myNavbar">
+    <a href="#home" class="w3-bar-item w3-button w3-wide">Intelligent Software Solutions</a>
+    <!-- Right-sided navbar links -->
+    <div class="w3-right w3-hide-small">
+      <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
+      <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-user"></i> TEAM</a>
+      <a href="#work" class="w3-bar-item w3-button"><i class="fa fa-briefcase"></i> PROJECTS</a>
+      <a href="#pricing" class="w3-bar-item w3-button"><i class="fa fa-wrench"></i> SERVICES</a>
+      <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
+    </div>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
+  <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">TEAM</a>
+  <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">WORK</a>
+  <a href="#pricing" onclick="w3_close()" class="w3-bar-item w3-button">PRICING</a>
+  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+</nav>
+
+<!-- Header with full-height image -->
+<header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-left w3-text-white" style="padding: 48px">
+    <span class="w3-jumbo w3-hide-small" style="font-size: 4rem; color: #fff; text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;">
+      Welcome to Intelligent Software Solutions
+    </span>
+    
+    <span class="w3-xxlarge w3-hide-large w3-hide-medium" style="font-size: 4rem; color: #fff; text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;">Welcome to Intelligent Software Solutions</span><br>
+    <span class="w3-large" style="font-size: 4rem; color: #fff; text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;">Your partner in advanced AI-driven software development.</span>
+    <p><a href="#contact" class="w3-button w3-teal w3-padding-large w3-large w3-margin-top w3-hover-opacity-off">Contact Us</a></p>
+  </div> 
+  <div class="w3-display-bottomleft w3-text-white w3-large" style="padding:24px 48px">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div>
+</header>
+
+<!-- About Section -->
+<div class="w3-container" style="padding:128px 16px" id="about">
+  <h3 class="w3-center">ABOUT US</h3>
+  <p class="w3-justify w3-large">At the forefront of <strong>AI and software development</strong>, we specialise in building <strong>scalable, efficient solutions</strong> 
+    tailored to your business needs. Our team brings a deep understanding of a diverse range of technologies and software tools, ensuring we can 
+    craft customised systems that drive performance and innovation. From robust backend architectures to seamless cloud integrations, we deliver 
+    solutions that are both powerful and future-proof. Whether you're seeking to enhance operational efficiency, implement <strong>AI-driven 
+    capabilities</strong>, or modernise your existing infrastructure, our expertise covers every aspect of the software development lifecycle. 
+    Explore the range of <strong>technologies</strong> we utilise, listed below, and let us help you transform your business with <strong>cutting-edge 
+    solutions</strong> that evolve alongside your growth.</p>
+  <div class="w3-row-padding w3-center" style="margin-top:64px">
+    <div class="w3-quarter">
+      <img src="./images/js.png" alt="JavaScript" class="w3-margin-bottom w3-jumbo w3-center">
+      <p class="w3-large">JavaScript</p>
+      <!-- <p>Powerful client-side scripting language used to enhance interactive web experiences.</p> -->
+    </div>
+    <div class="w3-quarter">
+      <img src="./images/html.png" alt="HTML" class="w3-margin-bottom w3-jumbo w3-center">
+      <p class="w3-large">HTML</p>
+      <!-- <p>The standard language for creating web pages, providing structure to the web.</p> -->
+    </div>
+    <div class="w3-quarter">
+      <img src="./images/css.png" alt="CSS" class="w3-margin-bottom w3-jumbo w3-center">
+      <p class="w3-large">CSS</p>
+      <!-- <p>Stylesheet language used to control the presentation and design of web pages.</p> -->
+    </div>
+    <div class="w3-quarter">
+      <img src="./images/aws.png" alt="AWS" class="w3-margin-bottom w3-jumbo w3-center">
+      <p class="w3-large">AWS</p>
+      <!-- <p>Cloud computing platform providing scalable infrastructure and services.</p> -->
+    </div>
+  </div>
+  <div class="w3-row-padding w3-center" style="margin-top:64px">
+    <div class="w3-quarter">
+      <img src="./images/django.png" alt="Django" class="w3-margin-bottom w3-jumbo w3-center">
+      <p class="w3-large">Django</p>
+      <!-- <p>High-level Python web framework encouraging rapid development and clean design.</p> -->
+    </div>
+    <div class="w3-quarter">
+      <img src="./images/react.png" alt="React" class="w3-margin-bottom w3-jumbo w3-center">
+      <p class="w3-large">React</p>
+      <!-- <p>A JavaScript library for building user interfaces, known for its efficiency and flexibility.</p> -->
+    </div>
+    <div class="w3-quarter">
+      <img src="./images/sql.png" alt="SQL" class="w3-margin-bottom w3-jumbo w3-center">
+      <p class="w3-large">SQL</p>
+      <!-- <p>A language designed for managing data in relational database management systems.</p> -->
+    </div>
+    <div class="w3-quarter">
+      <img src="./images/python.png" alt="Python" class="w3-margin-bottom w3-jumbo w3-center">
+      <p class="w3-large">Python</p>
+      <!-- <p>General-purpose programming language known for its readability and versatility.</p> -->
+    </div>
+  </div>
+  <div class="w3-row-padding w3-center" style="margin-top:64px">
+    <div class="w3-quarter">
+      <img src="./images/Pytorch.jpeg" alt="PyTorch" class="w3-margin-bottom w3-jumbo w3-center">
+      <p class="w3-large">PyTorch</p>
+      <!-- <p>An open-source machine learning library for deep learning and neural networks.</p> -->
+    </div>
+    <div class="w3-quarter">
+      <img src="./images/docker.png" alt="Docker" class="w3-margin-bottom w3-jumbo w3-center">
+      <p class="w3-large">Docker</p>
+      <!-- <p>A platform for developing, shipping, and running applications in isolated containers.</p> -->
+    </div>
+    <div class="w3-quarter">
+      <img src="./images/kubernetes.png" alt="Kubernetes" class="w3-margin-bottom w3-jumbo w3-center">
+      <p class="w3-large">Kubernetes</p>
+      <!-- <p>An open-source system for automating the deployment and scaling of containerized applications.</p> -->
+    </div>
+    <div class="w3-quarter">
+      <img src="./images/flask.png" alt="Flask" class="w3-margin-bottom w3-jumbo w3-center">
+      <p class="w3-large">Flask</p>
+      <!-- <p>A lightweight Python web framework, ideal for small applications and prototyping.</p> -->
+    </div>
+  </div>
+</div>
+
+<!-- Promo Section - "We know design" -->
+<div class="w3-container w3-light-grey" style="padding:128px 16px">
+  <div class="w3-row-padding">
+    <div class="w3-col m6">
+      <h3>We know AI.</h3>
+      <p class="w3-justify">At Intelligent Software Solutions, we are dedicated to delivering innovative and impactful software solutions that drive success for our clients. Our extensive portfolio showcases a diverse range of projects, highlighting our expertise in artificial intelligence, full stack development, and cutting-edge technologies. From enhancing educational platforms and streamlining business processes to developing AI-powered applications, our team consistently delivers high-quality results tailored to meet unique business needs. We invite you to explore our past projects and discover how our commitment to excellence and collaborative approach can transform your vision into reality.</p>
+      <p><a href="#work" class="w3-button w3-teal"><i class="fa fa-th"> </i> View Our Previos Projects</a></p>
+    </div>
+    <div class="w3-col m6">
+      <img class="w3-image w3-round-large" src="./images/contact-image2.webp" alt="Buildings" width="700" height="394">
+    </div>
+  </div>
+</div>
+
+<!-- Team Section -->
+<style>
+  /* Namespace the team section */
+  .team-section {
+    padding: 128px 16px;
+  }
+
+  .team-section .team-header {
+    text-align: center;
+  }
+
+  .team-section .team-header h3 {
+    margin-bottom: 8px;
+  }
+
+  .team-section .team-header p {
+    margin-bottom: 64px;
+  }
+
+  .team-section .team-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -8px; /* Adjust for padding */
+  }
+
+  .team-section .team-col {
+    padding: 8px;
+    box-sizing: border-box;
+    width: 33.3333%; /* 3 columns */
+  }
+
+  /* Responsive Adjustments */
+
+  @media (max-width: 800px) {
+    .team-section .team-col {
+      width: 100%; /* 1 column on small screens */
+      display: flex;
+      justify-content: center;
+    }
+    .team-section .team-card {
+      max-width: 400px; /* Adjust as needed */
+      width: 100%;
+    }
+  }
+
+  /* Team Card Styling */
+  .team-section .team-card {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transition: box-shadow 0.3s;
+  }
+
+  .team-section .team-card:hover {
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  }
+
+  .team-section .team-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .team-section .team-content {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  .team-section .team-content h3 {
+    margin: 0 0 8px 0;
+    font-size: 1.5em;
+  }
+
+  .team-section .team-content p.title {
+    color: #777;
+    margin-bottom: 16px;
+    font-style: italic;
+  }
+
+  .team-section .team-content p.description {
+    flex-grow: 1;
+    text-align: justify;
+    margin-bottom: 16px;
+  }
+
+  .team-section .team-content a.contact-button {
+    align-self: flex-start;
+    background-color: #1abc9c;
+    color: #000;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+
+  .team-section .team-content a.contact-button:hover {
+    background-color: #ddd;
+  }
+</style>
+</head>
+<body>
+
+<!-- Team Section -->
+<div class="w3-container team-section" id="team">
+  <div class="team-header">
+    <h3>THE TEAM</h3>
+    <p class="w3-large w3-justify">At Intelligent Software Solutions, our strength lies in our collaborative spirit and unwavering commitment to efficiency. We are a dedicated team of software engineers and AI specialists who seamlessly integrate our diverse skill sets to deliver innovative and reliable solutions. By fostering a culture of open communication and mutual support, we ensure that every project is executed with precision and excellence. Our unified approach not only enhances productivity but also drives continuous improvement, allowing us to meet and exceed our clients' expectations consistently. Together, we are passionate about transforming ideas into impactful technologies that propel businesses forward.</p>
+  </div>
+  <div class="team-row">
+    
+    <!-- Russ's Profile -->
+    <div class="team-col">
+      <div class="team-card">
+        <img src="./images/russ.jpg" alt="Russ">
+        <div class="team-content">
+          <h3>Russ Smith BSc (Hons)</h3>
+          <p class="title">Partner, Full Stack Developer and AI Specialist</p>
+          <p class="description">
+            Russ is a highly skilled software engineer with extensive expertise in artificial intelligence and full stack development. He excels in designing and implementing advanced AI solutions, leveraging the latest technologies to enhance user experiences and system performance. Russ is proficient in a variety of programming languages and frameworks, including Python, JavaScript, PyTorch, and Django, as well as numerous cloud services. His strong problem-solving abilities enable him to optimize systems for accuracy, scalability, and efficiency, making him a valuable leader in both AI and web development domains.
+          </p>
+          <a href="#contact" class="contact-button"><i class="fa fa-envelope"></i> Contact</a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Fraser's Profile -->
+    <div class="team-col">
+      <div class="team-card">
+        <img src="./images/frase.jpeg" alt="Fraser">
+        <div class="team-content">
+          <h3>Fraser Robinson MSc (Hons)</h3>
+          <p class="title">Managing Director, Head of AI, Infrastructure and API Development</p>
+          <p class="description">
+            Fraser is an accomplished software engineer specializing in artificial intelligence and full stack development. He is adept at creating innovative AI-driven applications and robust web platforms, utilizing cutting-edge technologies to deliver high-quality solutions. Fraser is well-versed in machine learning algorithms, neural network architectures, and modern development frameworks such as Python, JavaScript, TensorFlow, and React. His ability to tackle complex challenges and enhance system performance ensures scalable and efficient outcomes, positioning him as a key contributor in both AI and web development projects.
+          </p>
+          <a href="#contact" class="contact-button"><i class="fa fa-envelope"></i> Contact</a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Matt's Profile -->
+    <div class="team-col">
+      <div class="team-card">
+        <img src="./images/matt.jpeg" alt="Matt">
+        <div class="team-content">
+          <h3>Dr Matt James PhD</h3>
+          <p class="title">Partner & Senior AI/Backend Developer and Space Plasma Physics Expert</p>
+          <p class="description">
+            Matt is a seasoned AI developer with a strong background in data analysis and machine learning. He brings a wealth of knowledge in developing and deploying AI models, applying his skills to a variety of technical and interdisciplinary projects. Matt is proficient in backend development using Django and has extensive experience in data processing and analysis. His expertise in machine learning frameworks and collaborative filtering techniques allows him to create impactful solutions across scientific and commercial applications. Passionate about open-source collaboration, Matt leads innovative initiatives in AI and machine learning, driving progress and excellence in the field.
+          </p>
+          <a href="#contact" class="contact-button"><i class="fa fa-envelope"></i> Contact</a>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+
+
+<!-- Promo Section "Statistics" -->
+<!-- <div class="w3-container w3-row w3-center w3-dark-grey w3-padding-64">
+  <div class="w3-quarter">
+    <span class="w3-xxlarge">14+</span>
+    <br>Partners
+  </div>
+  <div class="w3-quarter">
+    <span class="w3-xxlarge">55+</span>
+    <br>Projects Done
+  </div>
+  <div class="w3-quarter">
+    <span class="w3-xxlarge">89+</span>
+    <br>Happy Clients
+  </div>
+  <div class="w3-quarter">
+    <span class="w3-xxlarge">150+</span>
+    <br>Meetings
+  </div>
+</div> -->
+
+<!-- Work Section -->
+<div class="w3-container" style="padding:16px" id="work">
+  <h3 class="w3-center">PAST PROJECTS</h3>
+  <p class="w3-center w3-large">Please read about some of the past projects our team have been involved in</p>
+
+  <div class="w3-row-padding" style="margin-top:64px">
+    <div class="w3-col l2 m4 s6">
+      <div class="w3-card" id="proj1">
+        <img src="./images/proj1.webp" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Revolutionising Music Creation with AI
+        Our team developed an advanced AI-based platform that allows users to generate music through natural language interaction. Leveraging deep learning 
+        models, this system generates high-quality music in real-time, giving users unprecedented creative control. The platform integrates LLMs with dynamic
+        effects systems, enabling users to create personalised musical experiences.">
+        <div class="w3-container">
+          <h4>AI-Powered Music and Social Media Platform</h4>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l2 m4 s6">
+      <div class="w3-card" id="proj2">
+        <img src="./images/proj2.webp" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Automated and Customisable Content Moderation
+        This AI-driven moderation tool is designed to handle content at scale, including text, audio, images, and video. Deployed for international clients, 
+        the system provides bespoke moderation solutions with AI systems fine-tuned to each client’s requirements. This scalable solution significantly 
+        reduces manual intervention while maintaining high levels of accuracy and performance.">
+        <div class="w3-container">
+          <h4>AI Content Moderation System</h4>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l2 m4 s6">
+      <div class="w3-card" id="proj3">
+        <img src="./images/proj3.webp" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Streamlining Business Processes with Natural Language Processing
+        We developed a sophisticated AI system that replaces manual workflows with natural language processing, optimising cost-efficiency and accuracy. 
+        This project involved building and fine-tuning AI models to automate business processes, dramatically reducing human intervention while improving 
+        speed and precision in data processing.">
+        <div class="w3-container">
+          <h4>Natural Language Processing for B2B</h4>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l2 m4 s6">
+      <div class="w3-card" id="proj4">
+        <img src="./images/proj4.webp" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt=" Job Seekers Create Professional CVs
+        Designed for government agencies, this AI-powered CV generation platform helps job seekers craft high-quality CVs by analysing their 
+        professional details and job descriptions. The system generates customised CVs ready for job applications, offering a scalable solution 
+        to address unemployment challenges.">
+        <div class="w3-container">
+          <h4>AI-Powered CV Generator SaaS</h4>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l2 m4 s6">
+      <div class="w3-card" id="proj5">
+        <img src="./images/proj5.webp" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Enhancing Education with AI Assistance
+        Our team built a platform that supports teachers by utilising large language models to generate content and respond to syllabus-specific
+         questions. This solution, enhanced with agentic workflows and retrieval-augmented generation (RAG), ensures that teachers have access
+          to accurate, up-to-date information, even with rapidly changing curriculums.">
+        <div class="w3-container">
+          <h4>Classroom Support Platform Using LLMs</h4>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l2 m4 s6">
+      <div class="w3-card" id="proj6">
+        <img src="./images/proj6.webp" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Innovating in Audio Processing with AI
+        This project involved the development of AI models to separate and reverse audio effects with applications in both entertainment and 
+        academic fields. The AI system can tag and caption audio, delivering precise and contextually relevant metadata that enhances the 
+        audio experience for users.">
+        <div class="w3-container">
+          <h4>AI-Based Audio Source Separation and Reversal</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+/* Unique IDs for project cards */
+#proj1,
+#proj2,
+#proj3,
+#proj4,
+#proj5,
+#proj6 {
+  /* Set a fixed height for all project cards */
+  height: 400px; /* Adjust as needed */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Ensure images are the same height and cover the container */
+#proj1 img,
+#proj2 img,
+#proj3 img,
+#proj4 img,
+#proj5 img,
+#proj6 img {
+  height: 250px; /* Adjust as needed */
+  object-fit: cover;
+}
+
+/* Consistent styling for the container below images */
+#proj1 .w3-container,
+#proj2 .w3-container,
+#proj3 .w3-container,
+#proj4 .w3-container,
+#proj5 .w3-container,
+#proj6 .w3-container {
+  height: 150px; /* Adjust as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Ensure the h4 titles are centered */
+#proj1 .w3-container h4,
+#proj2 .w3-container h4,
+#proj3 .w3-container h4,
+#proj4 .w3-container h4,
+#proj5 .w3-container h4,
+#proj6 .w3-container h4 {
+  text-align: center;
+  margin: 0;
+  padding: 10px;
+  font-size: 1.1em;
+}
+
+
+</style>
+  <!-- <div class="w3-row-padding w3-section">
+    <div class="w3-col l3 m6">
+      <img src="/w3images/tech_tablet.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A tablet">
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="/w3images/tech_camera.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A camera">
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="/w3images/tech_typewriter.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A typewriter">
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="/w3images/tech_tableturner.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A tableturner">
+    </div>
+  </div>
+</div> -->
+
+<!-- Modal for full size images on click-->
+<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+  <span class="w3-button w3-xxlarge w3-black w3-padding-large w3-display-topright" title="Close Modal Image">×</span>
+  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+    <img id="img01" class="w3-image" style="max-width: 40%; max-height: 40%;">
+    <p id="caption" class="w3-opacity w3-large"></p>
+  </div>
+</div>
+
+
+<!-- Skills Section -->
+<!-- <div class="w3-container w3-light-grey w3-padding-64">
+  <div class="w3-row-padding">
+    <div class="w3-col m6">
+      <h3>Our Skills.</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br>
+      tempor incididunt ut labore et dolore.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br>
+      tempor incididunt ut labore et dolore.</p>
+    </div>
+    <div class="w3-col m6">
+      <p class="w3-wide"><i class="fa fa-camera w3-margin-right"></i>Photography</p>
+      <div class="w3-grey">
+        <div class="w3-container w3-dark-grey w3-center" style="width:90%">90%</div>
+      </div>
+      <p class="w3-wide"><i class="fa fa-desktop w3-margin-right"></i>Web Design</p>
+      <div class="w3-grey">
+        <div class="w3-container w3-dark-grey w3-center" style="width:85%">85%</div>
+      </div>
+      <p class="w3-wide"><i class="fa fa-photo w3-margin-right"></i>Photoshop</p>
+      <div class="w3-grey">
+        <div class="w3-container w3-dark-grey w3-center" style="width:75%">75%</div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<!-- Services Section -->
+<div class="w3-container w3-center w3-dark-grey services-section" id="services">
+  <h3 class="section-title">SERVICES</h3>
+  <p class="section-description">
+    At Intelligent Software Solutions, we are committed to delivering exceptional software solutions tailored to meet the unique needs of our clients. Our comprehensive range of services encompasses cutting-edge artificial intelligence, full stack development, cloud infrastructure management, and more. Leveraging the latest technologies and industry best practices, our dedicated team ensures that each project is executed with precision, efficiency, and innovation. Whether you're looking to enhance your business operations, implement AI-driven capabilities, or develop scalable web applications, we partner with you to transform your vision into reality. Explore the services below to discover how our expertise can propel your business forward.
+  </p>
+
+  <div class="accordion-container">
+    <!-- Repeat this block for each service -->
+    
+    <button class="accordion">Custom AI System Development</button>
+    <div class="panel">
+      <p>
+        Leverage cutting-edge artificial intelligence techniques to design and build bespoke AI systems tailored to your business needs. With extensive experience in creating AI solutions from scratch, we specialise in developing production-ready and scalable AI systems using technologies such as TensorFlow, PyTorch, and advanced transformer models. Whether it's developing a sophisticated recommendation engine or an intelligent automation tool, our expertise ensures robust and efficient AI systems that drive real business value.
+      </p>
+      <p><strong>Technologies Used:</strong> Python, TensorFlow, PyTorch, Transformers, NLP, LLMs.</p>
+    </div>
+
+    <button class="accordion">RESTful API Design and Development</button>
+    <div class="panel">
+      <p>
+        Create and manage high-performance RESTful APIs to enable seamless integration and interaction between your systems. From initial design through to production deployment, we ensure APIs are scalable, secure, and tailored to meet specific requirements. Utilizing Django and Flask, we build APIs that facilitate efficient data exchange and system interoperability, enhancing the overall functionality of your applications.
+      </p>
+      <p><strong>Technologies Used:</strong> Python, Django, Flask, RESTful API, RabbitMQ.</p>
+    </div>
+
+    <button class="accordion">Cloud Infrastructure Setup and Management</button>
+    <div class="panel">
+      <p>
+        Design and deploy scalable cloud infrastructure solutions using AWS, GCP, and other cloud platforms. We provide end-to-end management of cloud resources, including setting up Kubernetes clusters, optimising costs, and ensuring robust security. Our services include cloud architecture design, implementation of best practices for performance and scalability, and management of administrative aspects such as VPNs and cloud access.
+      </p>
+      <p><strong>Technologies Used:</strong> AWS, GCP, Kubernetes, Docker, Cloud Development.</p>
+    </div>
+
+    <button class="accordion">Machine Learning Model Development and Deployment</button>
+    <div class="panel">
+      <p>
+        Develop and deploy sophisticated machine learning models that solve complex problems and enhance business operations. From training custom models with deep learning frameworks to deploying pre-trained models for real-time applications, we handle the entire lifecycle of machine learning solutions. Our experience includes working with neural networks, reinforcement learning, and ensemble methods to achieve optimal performance and accuracy.
+      </p>
+      <p><strong>Technologies Used:</strong> PyTorch, Keras, TensorFlow, Reinforcement Learning, Neural Networks, NLP.</p>
+    </div>
+
+    <button class="accordion">AI-Powered Content Moderation Solutions</button>
+    <div class="panel">
+      <p>
+        Implement advanced AI systems for content moderation across various media types including text, audio, images, and video. Our solutions are designed to handle large-scale content moderation tasks with precision, leveraging custom AI models to ensure compliance with specific client requirements. This service is ideal for businesses needing scalable, adaptable content moderation solutions to maintain quality and safety across their platforms.
+      </p>
+      <p><strong>Technologies Used:</strong> Python, Django, TensorFlow, Custom AI Models.</p>
+    </div>
+
+    <button class="accordion">Natural Language Processing (NLP) Systems</button>
+    <div class="panel">
+      <p>
+        Create NLP solutions to process, analyse, and derive insights from textual data. Whether it's building chatbots, sentiment analysis tools, or automated text processing systems, we utilise state-of-the-art NLP techniques to enhance your business capabilities. Our expertise includes developing systems that improve accuracy and reduce manual intervention, providing measurable improvements in efficiency and effectiveness.
+      </p>
+      <p><strong>Technologies Used:</strong> Python, NLP, Transformers, Sentiment Analysis.</p>
+    </div>
+
+    <button class="accordion">Advanced Data Analytics and Visualisation</button>
+    <div class="panel">
+      <p>
+        Transform raw data into actionable insights with comprehensive data analytics and visualisation services. Using tools such as pandas and NumPy, we analyse complex datasets to uncover trends and patterns. We also create interactive visualisations that make it easier for stakeholders to understand and act on data-driven insights. This service is crucial for businesses seeking to make informed decisions based on data.
+      </p>
+      <p><strong>Technologies Used:</strong> Python, Pandas, NumPy, Data Visualisation.</p>
+    </div>
+
+    <button class="accordion">Full Stack Development and Integration</button>
+    <div class="panel">
+      <p>
+        Offer end-to-end full stack development services to build and integrate web applications. From backend development with Django to frontend implementations with JavaScript, we ensure a seamless and functional user experience. Our approach covers everything from database design to API development, providing a comprehensive solution that meets all your application needs.
+      </p>
+      <p><strong>Technologies Used:</strong> Python, Django, JavaScript, SQL, Full Stack Development.</p>
+    </div>
+
+    <button class="accordion">AI-Based CV Enhancement and Automation</button>
+    <div class="panel">
+      <p>
+        Develop AI-powered solutions to assist job seekers in creating professional-quality CVs. Our service automates the CV creation process by analysing job descriptions and personal details to generate optimised, tailored CVs. This solution is particularly valuable for job seekers looking to improve their job application materials with minimal effort.
+      </p>
+      <p><strong>Technologies Used:</strong> Python, Django, AI, CV Generation.</p>
+    </div>
+
+    <button class="accordion">Bespoke AI Model Optimisation</button>
+    <div class="panel">
+      <p>
+        Optimise and fine-tune existing AI models to enhance performance and efficiency. Using techniques like model distillation, quantisation, and mixture of experts, we improve the accuracy and computational efficiency of your models. Whether you need to reduce model size for deployment on limited hardware or boost performance for complex tasks, we provide tailored optimisation strategies to meet your specific requirements.
+      </p>
+      <p><strong>Technologies Used:</strong> PyTorch, TensorFlow, Model Distillation, Quantisation, Mixture of Experts.</p>
+    </div>
+
+    <button class="accordion">Automated Codebase Modifications</button>
+    <div class="panel">
+      <p>
+        Implement automated systems for codebase modifications using natural language prompts. Our custom-built solutions integrate with platforms like Slack to enable automatic code updates, test runs, and GitHub pull requests. This service is ideal for teams looking to streamline development workflows and reduce manual coding effort, increasing productivity and consistency.
+      </p>
+      <p><strong>Technologies Used:</strong> Python, Slack Integration, GitHub, NLP.</p>
+    </div>
+
+    <button class="accordion">Advanced Reinforcement Learning Systems</button>
+    <div class="panel">
+      <p>
+        Develop and implement reinforcement learning systems for complex decision-making tasks. From game-playing agents to competitive trading algorithms, we build RL systems using methodologies like Q-learning, deep Q-learning, and proximal policy optimisation. Our solutions are designed to learn and adapt in dynamic environments, providing high-performance results across a range of applications.
+      </p>
+      <p><strong>Technologies Used:</strong> Reinforcement Learning, Q-Learning, Deep Q-Learning, Proximal Policy Optimisation.</p>
+    </div>
+
+    <button class="accordion">Custom Simulation and Modelling</button>
+    <div class="panel">
+      <p>
+        Create simulations and models to analyse and predict various scenarios within your business or research domain. Utilizing techniques from simulations and optimisation, we develop models that provide insights into system behaviour and performance under different conditions. This service is valuable for testing hypotheses, optimising processes, and making data-driven decisions.
+      </p>
+      <p><strong>Technologies Used:</strong> Python, Simulations, Optimisation, Data Analysis.</p>
+    </div>
+
+    <button class="accordion">AI-Driven Sentiment Analysis</button>
+    <div class="panel">
+      <p>
+        Implement sentiment analysis solutions to understand and leverage customer feedback, social media trends, and market sentiment. Using advanced NLP techniques, we build systems that analyse textual data to gauge sentiment, providing actionable insights for business strategy and customer engagement.
+      </p>
+      <p><strong>Technologies Used:</strong> Python, NLP, Sentiment Analysis, Transformers.</p>
+    </div>
+
+    <button class="accordion">Full Software Development Lifecycle Management</button>
+    <div class="panel">
+      <p>
+        Offer comprehensive management of the entire software development lifecycle, from initial concept to deployment and maintenance. We oversee all stages of development, ensuring high-quality deliverables and efficient project execution. Our expertise includes project management, code quality assurance, and continuous integration/continuous deployment (CI/CD) practices.
+      </p>
+      <p><strong>Technologies Used:</strong> Python, Django, CI/CD, Project Management, Full Software Development Cycle.</p>
+    </div>
+
+    <button class="accordion">Embedded Systems Development</button>
+    <div class="panel">
+      <p>
+        Design and develop embedded systems for specialised hardware applications. With experience in working with FPGAs and other hardware platforms, we create solutions that integrate software with hardware to achieve specific functionality. This service includes development of firmware, hardware-software integration, and system testing.
+      </p>
+      <p><strong>Technologies Used:</strong> FPGAs, Python, Embedded Systems, Hardware Integration.</p>
+    </div>
+
+    <button class="accordion">AI and ML Research and Consultation</button>
+    <div class="panel">
+      <p>
+        Provide research and consultation services in artificial intelligence and machine learning. We offer expert advice on the latest trends, technologies, and methodologies, helping you navigate complex AI challenges and make informed decisions. Whether you need guidance on cutting-edge research or practical application of AI techniques, our insights drive innovation and strategic advantage.
+      </p>
+      <p><strong>Technologies Used:</strong> AI Research, Machine Learning, Python, Advanced Algorithms.</p>
+    </div>
+
+    <button class="accordion">Advanced Data Engineering Solutions</button>
+    <div class="panel">
+      <p>
+        Design and implement sophisticated data engineering solutions to manage, process, and analyse large datasets efficiently. We create robust data pipelines, ensure data quality and integrity, and optimise data storage and retrieval. This service is ideal for businesses needing scalable solutions for handling big data, integrating various data sources, and enabling advanced analytics.
+      </p>
+      <p><strong>Technologies Used:</strong> Python, SQL, Data Engineering, ETL Processes, Data Pipelines.</p>
+    </div>
+
+    <button class="accordion">Custom Chatbot and Conversational AI Development</button>
+    <div class="panel">
+      <p>
+        Develop intelligent chatbots and conversational AI systems to enhance customer interaction and automate routine tasks. Using natural language processing and machine learning, we build chatbots that understand and respond to user queries effectively, providing a seamless and engaging user experience.
+      </p>
+      <p><strong>Technologies Used:</strong> NLP, Python, TensorFlow, Chatbots, Conversational AI.</p>
+    </div>
+
+    <button class="accordion">Proprietary AI System Integration</button>
+    <div class="panel">
+      <p>
+        Integrate proprietary AI systems into your existing infrastructure to enhance functionality and performance. We ensure seamless integration of AI models and solutions with your current systems, optimising workflows and enabling new capabilities. This service includes designing integration strategies, implementing solutions, and providing ongoing support.
+      </p>
+      <p><strong>Technologies Used:</strong> Python, API Integration, AI Systems, System Architecture.</p>
+    </div>
+
+    <button class="accordion">High-Performance Computing Solutions</button>
+    <div class="panel">
+      <p>
+        Provide high-performance computing (HPC) solutions for complex computations and data processing tasks. We design and deploy systems that leverage advanced hardware and software configurations to deliver exceptional performance for tasks such as simulations, data analysis, and AI model training.
+      </p>
+      <p><strong>Technologies Used:</strong> HPC, Python, Cloud Computing, Hardware Optimisation.</p>
+    </div>
+
+    <button class="accordion">AI-Enhanced Security Solutions</button>
+    <div class="panel">
+      <p>
+        Develop AI-driven security solutions to protect your systems and data from threats. We build advanced systems that use machine learning to detect and respond to security incidents, enhance threat detection, and automate security operations. This service is essential for businesses seeking to improve their security posture through innovative technologies.
+      </p>
+      <p><strong>Technologies Used:</strong> AI Security, Machine Learning, Python, Security Operations.</p>
+    </div>
+
+    <button class="accordion">Automated Testing and Quality Assurance</button>
+    <div class="panel">
+      <p>
+        Implement automated testing frameworks to ensure high-quality software deliverables. We design and execute automated tests for various application layers, including unit tests, integration tests, and end-to-end tests. This service helps identify issues early in the development process, reducing manual testing efforts and improving overall software quality.
+      </p>
+      <p><strong>Technologies Used:</strong> Python, pytest, CI/CD, Automated Testing, Quality Assurance.</p>
+    </div>
+
+    <button class="accordion">IoT (Internet of Things) Solutions</button>
+    <div class="panel">
+      <p>
+        Develop IoT solutions to connect and manage smart devices and sensors. We design and implement IoT systems that collect, analyse, and act on data from connected devices. This service includes developing firmware, creating data pipelines, and ensuring secure communication between devices and backend systems.
+      </p>
+      <p><strong>Technologies Used:</strong> IoT, Python, Firmware Development, Data Pipelines, Security.</p>
+    </div>
+
+    <button class="accordion">Real-Time Data Processing and Analytics</button>
+    <div class="panel">
+      <p>
+        Create solutions for real-time data processing and analytics to enable instant insights and decision-making. We design systems that handle streaming data from various sources, perform real-time analysis, and provide actionable information. This service is ideal for applications requiring immediate data processing, such as financial trading systems or live monitoring solutions.
+      </p>
+      <p><strong>Technologies Used:</strong> Real-Time Data Processing, Python, Streaming Analytics, Data Engineering.</p>
+    </div>
+
+    <button class="accordion">AI and ML Training Workshops</button>
+    <div class="panel">
+      <p>
+        Conduct training workshops and seminars on artificial intelligence and machine learning. We offer educational sessions covering fundamental concepts, practical applications, and advanced techniques. These workshops are tailored to various skill levels and are designed to empower teams and individuals with the knowledge needed to leverage AI and ML effectively.
+      </p>
+      <p><strong>Technologies Used:</strong> AI Training, Machine Learning, Python, Workshops.</p>
+    </div>
+
+    <button class="accordion">Technical Documentation and Knowledge Transfer</button>
+    <div class="panel">
+      <p>
+        Provide comprehensive technical documentation and knowledge transfer services to ensure smooth handovers and effective utilisation of developed systems. We create detailed documentation, including system architecture, user guides, and API references, and offer training sessions to equip teams with the necessary knowledge to maintain and extend the systems.
+      </p>
+      <p><strong>Technologies Used:</strong> Technical Documentation, Knowledge Transfer, Python, System Architecture.</p>
+    </div>
+  </div>
+
+  <!-- Optional: Add more content or call-to-action here -->
+
+  <script>
+    // Accordion functionality
+    document.addEventListener("DOMContentLoaded", function() {
+      var acc = document.getElementsByClassName("accordion");
+      for (var i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var panel = this.nextElementSibling;
+          if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+          } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+          }
+        });
+      }
+    });
+  </script>
+
+<style>
+  /* Services Section Styling */
+.services-section {
+  background-color: #2c3e50; /* Dark grey background */
+  color: #ecf0f1; /* Light text for contrast */
+  padding: 128px 16px;
+}
+
+.section-title {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.section-description {
+  font-size: 1.2em;
+  line-height: 1.6;
+  margin: 0 auto 50px auto;
+  max-width: 800px;
+  color: #bdc3c7;
+}
+
+/* Accordion Container */
+.accordion-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Accordion Button Styling */
+.accordion {
+  background-color: #1abc9c;
+  color: #ecf0f1;
+  cursor: pointer;
+  padding: 18px 24px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 1.1em;
+  transition: background-color 0.4s, box-shadow 0.4s;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.accordion:hover, .accordion.active {
+  background-color: #34495e;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Panel Styling */
+.panel {
+  background-color: #ecf0f1;
+  color: #2c3e50;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-out;
+  padding: 0 24px;
+  border-radius: 0 0 5px 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+.panel p {
+  padding: 18px 0;
+  margin: 0;
+  font-size: 1em;
+  line-height: 1.6;
+}
+
+.panel p strong {
+  color: #34495e;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2em;
+  }
+
+  .section-description {
+    font-size: 1em;
+  }
+
+  .accordion {
+    font-size: 1em;
+    padding: 16px 20px;
+  }
+
+  .panel {
+    padding: 0 20px;
+  }
+}
+
+</style>
+
+<!-- Contact Section -->
+<div class="w3-container w3-light-grey" style="padding:128px 16px" id="contact">
+  <h3 class="w3-center">CONTACT</h3>
+  <p class="w3-justify w3-large">
+    At Intelligent Software Solutions, we understand that every business has unique challenges and goals. That's why we're here to offer tailored software solutions that drive innovation and efficiency. Whether you're looking to enhance your existing systems, implement cutting-edge AI technologies, or develop custom applications from scratch, our expert team is ready to partner with you every step of the way. Take the first step towards transforming your business by reaching out to us today. Fill out our contact form below, and let us help you turn your vision into reality with precision and excellence.
+  </p>
+  
+  <div class="contact-elements">
+    <!-- Google Form Container -->
+    <div class="form-container">
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeD1Dr0NdSgc9VN5dVc49_c-LBiuk8Y0PIajLy9XH_7iANbxg/viewform?embedded=true" width="100%" height="750" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    </div>
+    
+    <!-- Map Container -->
+    <div class="map-container">
+      <img src="./images/map.png" alt="Location Map" class="w3-image w3-greyscale">
+    </div>
+  </div>
+  
+  <div class="w3-center contact-info">
+    <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i>Leicestershire, England</p>
+    <!-- <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +00 151515</p> -->
+    <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"></i> Email: iss.queries@gmail.com</p>
+  </div>
+</div>
+<style>
+/* Container for the form and map */
+.contact-elements {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center; /* Vertically center items */
+  gap: 40px;
+  margin-top: 48px;
+}
+
+/* Form Container Styling */
+.form-container {
+  background: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 640px;
+  width: 100%;
+  transition: transform 0.3s, box-shadow 0.3s;
+  
+  /* Optionally set a max height with scroll */
+  max-height: 750px; /* Match iframe height */
+  overflow: auto;
+}
+
+.form-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Map Container Styling */
+.map-container {
+  background: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  max-width: 640px;
+  width: 100%;
+  transition: transform 0.3s, box-shadow 0.3s;
+  
+  /* Set height to match form container or adjust as needed */
+  height: 750px; /* Match iframe height */
+  
+  /* Optionally use aspect-ratio for responsiveness */
+  /* aspect-ratio: 16 / 9; */ 
+}
+
+.map-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.map-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .contact-elements {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Adjust heights for smaller screens if necessary */
+  .form-container, .map-container {
+    height: auto;
+  }
+  
+  .map-container img {
+    height: auto;
+  }
+}
+
+/* Additional Styling for Contact Info */
+.contact-info {
+  margin-top: 40px;
+}
+
+.contact-info p {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+
+</style>
+
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64">
+  <a href="#home" class="w3-button w3-teal"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <div class="w3-xlarge w3-section">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div>
+  <p>&copy; 2024 Intelligent Software Solutions. All rights reserved.</p>
+</footer>
+ 
+<script>
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+
+// Toggle between showing and hiding the sidebar when clicking the menu icon
+var mySidebar = document.getElementById("mySidebar");
+
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+  } else {
+    mySidebar.style.display = 'block';
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+}
+</script>
+
 </body>
 </html>
